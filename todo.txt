@@ -1,0 +1,5 @@
+1. Moze 2 i moze sva 3
+2. Ne zaboraviti da ono sto imaju roditelji a nema dete je De Novo
+3. Sta se desi ako se dete zavrsi a roditelji ne (slucaj kada je dete mutiralo u referencu)
+4. Poziciju hromozoma da proveravamo!
+5. Posle svakog next pomeranja proveriti da li je None

@@ -3,3 +3,8 @@
 3. Sta se desi ako se dete zavrsi a roditelji ne (slucaj kada je dete mutiralo u referencu)
 4. Poziciju hromozoma da proveravamo!
 5. Posle svakog next pomeranja proveriti da li je None
+6. izracunati chrom_power
+
+childPos = (childPos // CHROM_POWER + int(childVariant.chrom != ('chr' + str(childPos // CHROM_POWER)))) * CHROM_POWER + childVariant.pos
+motherPos = (motherPos // CHROM_POWER + int(motherVariant.chrom != ('chr' + str(motherPos // CHROM_POWER)))) * CHROM_POWER + motherVariant.pos
+fatherPos = (fatherPos // CHROM_POWER + int(fatherVariant.chrom != ('chr' + str(fatherPos // CHROM_POWER)))) * CHROM_POWER + fatherVariant.pos

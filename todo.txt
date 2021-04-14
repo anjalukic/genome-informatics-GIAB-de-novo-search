@@ -4,7 +4,15 @@
 4. Poziciju hromozoma da proveravamo!
 5. Posle svakog next pomeranja proveriti da li je None
 6. izracunati chrom_power
+(1) check (2) union (3) disjunction
+7. Ukoliko roditelji imaju istu varijaciju na istoj poziciji 0/1-0/1, 1/1-0/1, 0/1-1/1 dete moze da bude 0/1 ili 1/1 - U (3) tako sto ako je pos, ref i alt isti a GT razlicit onda prepisujemo GT iz deteta
+8. Ukoliko oba roditelja imaju istu 1/2 varijaciju i dete 1/2 popraviti gde mi uzimamo 1 od oba i onda cemo posle upisati 1/1 a ne 1/2 - Ukoliko se kod jednog roditelja poklopi oba (1) pisati 1/2 umesto 0/1 i na (2) kraju ukoliko 1/2 ignorisi i pisi
+9. Ukoliko oba roditelja imaju istu 1/2 varijaciju i dete 0/1  onda cemo posle upisati 1/1 a ne 0/1 - Ostavljamo isto na (1) a resavamo u (3) tako sto ako je pos, ref i alt isti a GT razlicit onda prepisujemo GT iz deteta
+10. Ukoliko jedan roditelj ima 1/2 drugi 0/1 a dete ima 1/2 onda cemo pisati 1/1 umesto 1/2 - Ukoliko se kod jednog roditelja poklopi oba (1) pisati 1/2 umesto 0/1 i na (2) kraju ukoliko 1/2 ignorisi i pisi
+11 Ukoliko mama 1/2 a tata 0/0 a dete 1/2 u (1) upisujemo 1/2 a u (2) 0/1
+12. M 0/1, D 1/2, T1/2 -> ***MD 0/0, DT 1/2*** -> unija 1/2 U UNIJI DE NOVO fiksiramo 0 na 0/0 a na drugom bilo koju
+12. M 1/1, D 1/1, T1/1 -> ***MD 0/0, DT 1/1*** -> unija 1/1 U UNIJI DE NOVO fiksiramo 0 na 0/0 a na drugom bilo koju
 
-childPos = (childPos // CHROM_POWER + int(childVariant.chrom != ('chr' + str(childPos // CHROM_POWER)))) * CHROM_POWER + childVariant.pos
-motherPos = (motherPos // CHROM_POWER + int(motherVariant.chrom != ('chr' + str(motherPos // CHROM_POWER)))) * CHROM_POWER + motherVariant.pos
-fatherPos = (fatherPos // CHROM_POWER + int(fatherVariant.chrom != ('chr' + str(fatherPos // CHROM_POWER)))) * CHROM_POWER + fatherVariant.pos
+13. U DISJUNCTION proveriti ako su 1/2 koje smo mi pravili da proverimo obe kombinacije 1/2 i 2/1 
+
+

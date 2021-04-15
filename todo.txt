@@ -5,7 +5,7 @@
 5. Posle svakog next pomeranja proveriti da li je None
 6. izracunati chrom_power
 (1) check (2) union (3) disjunction
-7. Ukoliko roditelji imaju istu varijaciju na istoj poziciji 0/1-0/1, 1/1-0/1, 0/1-1/1 dete moze da bude 0/1 ili 1/1 - U (3) tako sto ako je pos, ref i alt isti a GT razlicit onda prepisujemo GT iz deteta
+
 8. Ukoliko oba roditelja imaju istu 1/2 varijaciju i dete 1/2 popraviti gde mi uzimamo 1 od oba i onda cemo posle upisati 1/1 a ne 1/2 - Ukoliko se kod jednog roditelja poklopi oba (1) pisati 1/2 umesto 0/1 i na (2) kraju ukoliko 1/2 ignorisi i pisi
 9. Ukoliko oba roditelja imaju istu 1/2 varijaciju i dete 0/1  onda cemo posle upisati 1/1 a ne 0/1 - Ostavljamo isto na (1) a resavamo u (3) tako sto ako je pos, ref i alt isti a GT razlicit onda prepisujemo GT iz deteta
 10. Ukoliko jedan roditelj ima 1/2 drugi 0/1 a dete ima 1/2 onda cemo pisati 1/1 umesto 1/2 - Ukoliko se kod jednog roditelja poklopi oba (1) pisati 1/2 umesto 0/1 i na (2) kraju ukoliko 1/2 ignorisi i pisi
@@ -14,5 +14,14 @@
 12. M 1/1, D 1/1, T1/1 -> ***MD 0/0, DT 1/1*** -> unija 1/1 U UNIJI DE NOVO fiksiramo 0 na 0/0 a na drugom bilo koju
 
 13. U DISJUNCTION proveriti ako su 1/2 koje smo mi pravili da proverimo obe kombinacije 1/2 i 2/1 
-
+7. Ukoliko roditelji imaju istu varijaciju na istoj poziciji 0/1-0/1, 1/1-0/1, 0/1-1/1 dete moze da bude 0/1 ili 1/1 - U (3) tako sto ako je pos, ref i alt isti a GT razlicit onda prepisujemo GT iz deteta
+-------------------------------------
+Mi necemo detektovati:
+	1. Jedna duza varijacija podeljena na nekoliko manjih sve ce se detektovati kao de novo
+	2. Ukoliko je drugacija zapisana varijacija npr na istoj poziciji 775840 - oba roditelja: C->CA 1/1 dete: CA->C,CAA gde je De Novo samo CA->C a ne oba
+	2. Isto samo na jednom roditelju a ne oba : 2211399
+	3. Ukoliko oba roditelja imaju 1/2 pri cemu je dete nasledilo po jedan od oba i onda skratilo tako da su ref i alt drugaciji npr pozicija 3719890 T:TTG->T,TTGTG, M:TTG->T,TTGTGTG dete nasledilo druga dva D:T->TTG,TTGTG
+Razlozi zasto ne bi trebali da gledamo chrX i chrY:
+	1. Zato sto oba roditelja imaju i X i Y, gde majka ima Y zbog greske sekvencera koji ne vidi razliku i taj Y bi trebao da bude X. Te greske su random tako da ceo Y je kompromitovan i ne treba ga gledati.
+	2. Kod oca koji bi i u chrX i chrY trebao da ima samo 0/1 format, on u oba hromozoma ima slucajeve sa 1/1 i 1/2. Posledica prethodne tacke je da majka ima sve formate u Y hromozomu.
 

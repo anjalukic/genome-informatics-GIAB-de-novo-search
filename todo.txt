@@ -27,8 +27,7 @@ Razlozi zasto ne bi trebali da gledamo chrX i chrY:
 
 AKO RADIMO XY I SVAKO SA SVAKIM DE NOVO 182209
 AKO RADIMO XY I SVAKO X SA MAJKOM Y SA OCEM DE NOVO 185445
-	PAR			TOT
-diff 1	14199-245=13.954	18538-245 = 18293	4339
-diff 2
-diff 3
-diff 4
+
+obrisati unionType
+
+da li treba menjati disjun ako radimo svako sa s vakim interType=False jer sta ako mama vrati 11 a otac 00

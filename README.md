@@ -15,7 +15,29 @@
 
 ---
 ### Enviroment
-&nbsp;&nbsp;&nbsp;&nbsp;This project was executed on a two platforms. Every tool execution was done on Seven Bridges platform while all Python scripts were done locally on Ubuntu 20.04 OS.
+&nbsp;&nbsp;&nbsp;&nbsp;This project was executed on a two platforms. Every tool execution was done on Seven Bridges platform while all Python scripts were done locally on Ubuntu 20.04 OS in Jupyter Notebook. 
 
 ## I Reconstruction of GIAB samples
-&nbsp;&nbsp;&nbsp;&nbsp;GRAF Germline Variant Detection Workflow tool was used to reconstuct whole genome from initial FASTQ files given the reference genome GRCh38. 
+&nbsp;&nbsp;&nbsp;&nbsp;GRAF Germline Variant Detection Workflow tool was used to reconstuct whole genome from initial FASTQ files given the reference genome GRCh38. Output of the previously mentioned tool is BAM file, which represents whole genome that is reconstructed and alligned, and VCF file, which represents all variations each sample had relative to reference genome GRCh38. In the continuation of the project, we will use three VCF files we recieved from this tool.
+
+## II Creating tool for finding de novo child variants 
+&nbsp;&nbsp;&nbsp;&nbsp;The code is organized into three parts. The first part will make a cross-section of one parent and a child, which represents all the mutations that a child could have gotten from that parent. Then, the union of these intersections was performed in order to get all the variations child could have gotten from the parents by inheritance. In the end, the disjunction of the child and the obtained union was made, which will give all the variations that the child has without being the result of inheritance. 
+
+![Code structure](images/code_structure.png)
+
+---
+### Somatic chromosomes
+
+
+### X and Y chromosomes
+
+
+## III Finding de novo variants using RTG Tools VCFEval 
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+## IV Results
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Future improvements
+&nbsp;&nbsp;&nbsp;&nbsp;

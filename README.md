@@ -12,6 +12,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;The Variant Call Format (VCF) specifies the format of a text file used in bioinformatics for storing gene sequence variations. It contains the VCF header and the columns of a VCF. The header begins the file and provides metadata describing the body of the file. The body of VCF follows the header, and is tab separated into 8 mandatory columns and an unlimited number of optional columns that may be used to record other information about the sample(s).
 
 ![VCF file exapmle](images/vcf_file.png)
+*VCF file example*  
 
 ---
 ### Enviroment
@@ -24,6 +25,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;The code is organized into three parts. The first part will make a cross-section of one parent and a child, which represents all the mutations that a child could have gotten from that parent. Then, the union of these intersections was performed in order to get all the variations child could have gotten from the parents by inheritance. In the end, the disjunction of the child and the obtained union was made, which will give all the variations that the child has without being the result of inheritance. 
 
 ![Code structure](images/code_structure.png)
+*Code structure*  
 
 ---
 ### Somatic chromosomes

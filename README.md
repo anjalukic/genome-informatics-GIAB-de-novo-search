@@ -16,8 +16,8 @@
 *VCF file example*  
 
 ---
-### Enviroment
-&nbsp;&nbsp;&nbsp;&nbsp;This project was executed on a two platforms. Every tool execution was done on Seven Bridges platform while all Python scripts were done locally on Ubuntu 20.04 OS in Jupyter Notebook. 
+### Environment
+&nbsp;&nbsp;&nbsp;&nbsp;This project was executed on two platforms. Every tool execution was done on Seven Bridges platform while all Python scripts were done locally on Ubuntu 20.04 OS in Jupyter Notebook. 
 
 ## I Reconstruction of GIAB samples
 &nbsp;&nbsp;&nbsp;&nbsp;GRAF Germline Variant Detection Workflow tool was used to reconstuct whole genome from initial FASTQ files given the reference genome GRCh38. Output of the previously mentioned tool is BAM file, which represents whole genome that is reconstructed and alligned, and VCF file, which represents all variations each sample had relative to reference genome GRCh38. In the continuation of the project, we will use three VCF files we recieved from this tool.
@@ -38,8 +38,9 @@
 
 
 ## III Finding de novo variants using RTG Tools VCFEval 
-&nbsp;&nbsp;&nbsp;&nbsp;We used RTG Tools VCFEval to find more accurate number of de novo variants in child genome. This was done by creating Workflow application on Seven Bridges platform. The application first used Tabix BGZIP and Index tools to convert VCF files to the required format required by VCFEval tool. The first comparison is done on mother-son and father-son pair
+&nbsp;&nbsp;&nbsp;&nbsp;We used RTG Tools VCFEval to find more accurate number of de novo variants in child genome. This was done by creating Workflow application on Seven Bridges platform. The application first used Tabix BGZIP and Index tools to convert VCF files to the required format required by VCFEval tool. The first comparison was done on mother-son and father-son pair (parents as baseline, child as calls) and false-positive output was taken. False-positive VCF contains called variants that were not in the baseline VCF, which in this case means childs variants that were not in parents. Two false-positive VCF files were forwarded to second comparison where tru-positive output was taken. True positive VCF represents variants that exist in both input VCF files, in other words, a variation of the child that is not found in either parent or de novo. 
 
+![Code structure](images/rtg_tools_vcfeval.png)
 
 ## IV Results
 &nbsp;&nbsp;&nbsp;&nbsp;

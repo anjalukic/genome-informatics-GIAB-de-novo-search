@@ -51,10 +51,10 @@
 ## IV Results
 &nbsp;&nbsp;&nbsp;&nbsp;Results obtained in this project can be seen in a table below.
 
-a | This project | Partial | RTG Tools VCFEval
+&nbsp; | This project | Partial | RTG Tools VCFEval
 ------------- | ------------- | ------------ | -------------
-**Number of de novo variants detected** | 184,689 | 131,570 | **85,381**
-**Percentage [%]** | 3.765 | 2.682 | **1.740** 
+Number of de novo variants detected | **184,689** | 131,570 | **85,381**
+Percentage [%] | **3.765** | 2.682 | **1.740** 
 
 
 ## Future improvements

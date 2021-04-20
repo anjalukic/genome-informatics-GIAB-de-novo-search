@@ -62,6 +62,7 @@ Percentage [%] | **3.765** | 2.682 | **1.740**
   * If both parents have genotype 1/2 where the child inherited one of both and the sequencer shortened REF and ALT of that variant. The script will detect de novo if ref and alt are different eg. position 3719890, chr1 | Father: TTG-> T, TTGTG | Mother: TTG-> T, TTGTGTG | Child inherited the other two D: T-> TTG, TTGTG. It will be detected as de novo even though it isn't.
   * The mutation occurred on one chromosome of the child. The sequencer then, instead of changing only one ALT of the child, he shortens them both and our script reports de novo on both chromosomes insead of on only one. Eg. position 775840, chr1 | both parents: C-> CA 1/1 | Child: CA-> C, CAA where de novo is only CA-> C and not both.
 
+---
 &nbsp;&nbsp;&nbsp;&nbsp;More detailed comparison of two results was done by SBG VCF Benchmark tool and Venn diagram showing number of true positives, false positives and false negatives between our project and RTG Tools VCFEval results can be seen below.
 
 ![Venn diagram1](images/venn_diagram1.png)

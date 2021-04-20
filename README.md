@@ -13,7 +13,8 @@
 
 ![VCF file exapmle](images/vcf_file.png)
 
-## Enviroment
+---
+### Enviroment
 &nbsp;&nbsp;&nbsp;&nbsp;This project was executed on a two platforms. Every tool execution was done on Seven Bridges platform while all Python scripts were done locally on Ubuntu OS.
 
 ## I Reconstruction of GIAB samples

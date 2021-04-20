@@ -1,7 +1,7 @@
 # De novo variants in the reconstructed GIAB genome
 
 ## Summary
-&nbsp;&nbsp;&nbsp;&nbsp;The goal of this project is to find de novo variants in genome of a child (son), given three (mother, father and son) GIAB sample files in FASTQ format. First, it was necessary to reconstruct the GIAB samples from FASTQ to VCF files which represent variations from reference genome. In second part we needed to write Python script to analyse three VCF files and to find all de novo variants in son. Thirdly, we used the RTG Tools VCFEval, tool that performs sophisticated comparison of VCF files, to find more accurate number of de novo variants in child. Finally, we compared results we got from our script to ones we got using tool made by Seven Bridges. We also used SBG VCF Benchmark for better visual representation of compared results.
+&nbsp;&nbsp;&nbsp;&nbsp;The goal of this project is to find de novo variants in the genome of a child (son), given three (mother, father and son) GIAB sample files in FASTQ format. First, it was necessary to reconstruct the GIAB samples from FASTQ to BAM and get VCF files which represent variants from reference genome. Secondly, we needed to write a Python script to analyse the three VCF files and to find all de novo variants in the son. Thirdly, we used RTG Tools VCFEval, a tool that performs sophisticated comparison of VCF files, to find the number of de novo variants in the child more accurately. Finally, we compared the results we got from our script to the ones we got using the tool made by Seven Bridges. We also used SBG VCF Benchmark for better visual representation of compared results.
 
 ---
 ### De novo

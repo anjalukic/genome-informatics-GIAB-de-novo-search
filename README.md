@@ -42,6 +42,12 @@
 
 ![Code structure](images/rtg_tools_vcfeval.png)
 
+*RTG Tools VCFEval application structure*  
+
+---
+
+As it can be seen from picture above, we stored true-positive VCF files after first comparison. True-positive VCF is equivalent of intersection done in this project. This was done so we can at the end not only compare end results (number of de novo variants) but so we can compare how each component (intersection and union/disjunction) performs against professional sophisticated comparison done by RTG Tools VCFEval.
+
 ## IV Results
 &nbsp;&nbsp;&nbsp;&nbsp;
 

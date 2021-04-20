@@ -59,8 +59,8 @@ Percentage [%] | **3.765** | 2.682 | **1.740**
 &nbsp;&nbsp;&nbsp;&nbsp;As it can be seen from table above, number of de novo variants this project achieved is much greater than it should be. This is happening because there are some situations our script does not detect resulting in a lot of false positive de novo variations. Some situations that our script will not detect:
   
   * The sequencer divides one longer variation into several smaller ones. Our script will report all of the smaller ones as de novo instead of detecting longer one.
-  * If both parents have genotype 1/2 where the child inherited one of both and the sequencer shortened REF and ALT of that variant. The script will detect de novo if ref and alt are different eg. position 3719890, chr1 Father: TTG-> T, TTGTG, Mother: TTG-> T, TTGTGTG. Child inherited the other two D: T-> TTG, TTGTG. It will be detected as de novo even though it isn't.
-  * The mutation occurred on one chromosome of the child. The sequencer then, instead of changing only one ALT of the child, he shortens them both and our script reports de novo on both chromosomes insead of on only one. Eg. position 775840, chr1 - both parents: C-> CA 1/1 child: CA-> C, CAA where De Novo only CA-> C and not both 
+  * If both parents have genotype 1/2 where the child inherited one of both and the sequencer shortened REF and ALT of that variant. The script will detect de novo if ref and alt are different eg. position 3719890, chr1 | Father: TTG-> T, TTGTG | Mother: TTG-> T, TTGTGTG | Child inherited the other two D: T-> TTG, TTGTG. It will be detected as de novo even though it isn't.
+  * The mutation occurred on one chromosome of the child. The sequencer then, instead of changing only one ALT of the child, he shortens them both and our script reports de novo on both chromosomes insead of on only one. Eg. position 775840, chr1 | both parents: C-> CA 1/1 | Child: CA-> C, CAA where De Novo only CA-> C and not both 
 
 ## Future improvements
 &nbsp;&nbsp;&nbsp;&nbsp;

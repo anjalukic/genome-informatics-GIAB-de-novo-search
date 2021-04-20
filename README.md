@@ -31,13 +31,14 @@
 
 ---
 ### Somatic chromosomes
-
+&nbsp;&nbsp;&nbsp;&nbsp; Talk about inheritance and all combinations
 
 ### X and Y chromosomes
+&nbsp;&nbsp;&nbsp;&nbsp; Talk about inheritance and all combinations and all problems and errors with XY chromosomes
 
 
 ## III Finding de novo variants using RTG Tools VCFEval 
-&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;We used RTG Tools VCFEval to find more accurate number of de novo variants in child genome. This was done by creating Workflow application on Seven Bridges platform. The application first used Tabix BGZIP and Index tools to convert VCF files to the required format required by VCFEval tool. The first comparison is done on mother-son and father-son pair
 
 
 ## IV Results

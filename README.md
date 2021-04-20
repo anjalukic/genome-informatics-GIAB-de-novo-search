@@ -13,6 +13,8 @@
 
 ![VCF file exapmle](images/vcf_file.png)
 
+*VCF file example*  
+
 ---
 ### Enviroment
 &nbsp;&nbsp;&nbsp;&nbsp;This project was executed on a two platforms. Every tool execution was done on Seven Bridges platform while all Python scripts were done locally on Ubuntu 20.04 OS in Jupyter Notebook. 
@@ -25,15 +27,18 @@
 
 ![Code structure](images/code_structure.png)
 
+*Code structure*  
+
 ---
 ### Somatic chromosomes
-
+&nbsp;&nbsp;&nbsp;&nbsp; Talk about inheritance and all combinations
 
 ### X and Y chromosomes
+&nbsp;&nbsp;&nbsp;&nbsp; Talk about inheritance and all combinations and all problems and errors with XY chromosomes
 
 
 ## III Finding de novo variants using RTG Tools VCFEval 
-&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;We used RTG Tools VCFEval to find more accurate number of de novo variants in child genome. This was done by creating Workflow application on Seven Bridges platform. The application first used Tabix BGZIP and Index tools to convert VCF files to the required format required by VCFEval tool. The first comparison is done on mother-son and father-son pair
 
 
 ## IV Results

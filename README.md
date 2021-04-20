@@ -46,10 +46,16 @@
 
 ---
 
-As it can be seen from picture above, we stored true-positive VCF files after first comparison. True-positive VCF is equivalent of intersection done in this project. This was done so we can at the end not only compare end results (number of de novo variants) but so we can compare how each component (intersection and union/disjunction) performs against professional sophisticated comparison done by RTG Tools VCFEval.
+&nbsp;&nbsp;&nbsp;&nbsp;As it can be seen from picture above, we stored true-positive VCF files after first comparison. True-positive VCF is equivalent of intersection done in this project. This was done so we can at the end not only compare end results (number of de novo variants) but so we can compare how each component (intersection and union/disjunction) performs against professional sophisticated comparison done by RTG Tools VCFEval.
 
 ## IV Results
-&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Results obtained in this project can be seen in a table below.
+
+ | This project | Partial | RTG Tools VCFEval
+------------- | ------------- | ------------ | -------------
+**Number of de novo variants detected** | 184,689 | 131,570 | **85,381**
+**Percentage [%]** | 3.765 | 2.682 | **1.740** 
+
 
 ## Future improvements
 &nbsp;&nbsp;&nbsp;&nbsp;

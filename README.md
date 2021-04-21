@@ -31,7 +31,7 @@
 
 ---
 ### Somatic chromosomes
-&nbsp;&nbsp;&nbsp;&nbsp; Talk about inheritance and all combinations
+&nbsp;&nbsp;&nbsp;&nbsp; Since a child inherits 1 chromosome from the mother and 1 chromosome from the father in each pair of somatic chromosomes, depending on variants the parents have on their chromosomes, there's a lot of combinations of variants the child could inherit from the parents (eg. if a mother has 0/1 genotype, the child has 1/1, and they have the same variant sequence, the child could have gotten 1 chromosome with that variant from the mother, and the other one is either a de novo variant or it's inherited from the father. If it's a different variant sequence in child and the mother, then it's a de novo variant since the child must have inherited either mother's variant or the sequence from the reference genome on 1 chromosome on that position). For the purpose of covering all the possible combinations that can happen on one position in one chromosome, we made tables consisting of 3 columns - genotype in the first file, genotype in the second file, and the action we do in that case. 
 
 ### X and Y chromosomes
 &nbsp;&nbsp;&nbsp;&nbsp; Talk about inheritance and all combinations and all problems and errors with XY chromosomes

@@ -25,10 +25,3 @@ Mi necemo detektovati:
 Razlozi zasto ne bi trebali da gledamo chrX i chrY:
 	1. Zato sto oba roditelja imaju i X i Y, gde majka ima Y zbog greske sekvencera koji ne vidi razliku i taj Y bi trebao da bude X. Te greske su random tako da ceo Y je kompromitovan i ne treba ga gledati.
 	2. Kod oca koji bi i u chrX i chrY trebao da ima samo 0/1 format, on u oba hromozoma ima slucajeve sa 1/1 i 1/2. Posledica prethodne tacke je da majka ima sve formate u Y hromozomu.
-
-AKO RADIMO XY I SVAKO SA SVAKIM DE NOVO 182209
-AKO RADIMO XY I SVAKO X SA MAJKOM Y SA OCEM DE NOVO 185445
-
-obrisati unionType
-
-da li treba menjati disjun ako radimo svako sa s vakim interType=False jer sta ako mama vrati 11 a otac 00

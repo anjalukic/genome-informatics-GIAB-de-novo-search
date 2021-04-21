@@ -1,0 +1,72 @@
+SLAJD 1
+
+Nas projekat je bio pronalazenje de novo varijanti u rekonstruisanom genomu deteta.
+
+SLAJD 2
+
+- Cilj projekta je bio da na osnovu tri fajla sa read-ovima iz genoma oca, majke i sina dobijemo broj i procenat de novo varijanti. 
+- De novo varijante u sustini predstavljaju varijante koje dete ima a roditelji nemaju,
+tj mutacije u genomu deteta koje nisu nasledjene od roditelja.
+
+SLAJD 3
+
+Razvoj ovog projekta se sastojao iz 4 koraka. 
+Prvi korak je bila rekonstrukcija sva tri genoma koju smo izvrsili pomocu GRAF alata. Na izlazu tog alata smo dobili bam fajlove sa celim genomima i vcf fajlove sa varijacijama u
+odnosu na referentni genom.
+U drugom koraku je trebalo da napisemo python skriptu koja ce na osnovu 3 dobijena vcf fajla izracunati broj de novo varijanti u detetu.
+Zatim smo pronasli broj de novo varijanti u detetu, ovaj put koriscenjem alata RTG tools VCFEval
+To nam je bilo potrebno da bi mogli da uporedimo nase rezultate sa rezultatima tog alata i da vidimo koliko nasi rezultati odstupaju, sto smo i uradili u poslednjem koraku
+
+SLAJD 4
+
+Ovo je struktura nase python skripte za odredjivanje de novo varijanti na osnovu ova tri ulazna fajla.
+Morali smo da paralelno obradjujemo samo po dva fajla, a ne tri odjednom, da bismo mogli rezultate da 
+uporedjujemo sa VCFEval alatom koji radi na isti nacin.
+Prva faza je odredjivanje preseka jednog roditelja i deteta, sto na izlazu daje sve varijacije sina koje je 
+mogao naslediti od tog roditelja.
+Druga faza je unija dva prethodno dobijena preseka, sto kao rezultat daje sve varijacije sina koje je 
+mogao naslediti od bilo kog (tj. bar jednog) roditelja.
+U poslednjoj fazi uzimamo uniju koju smo dobili i vcf fajl deteta da bismo odredili sve varijante koje
+dete nije moglo naslediti od bilo kog roditelja, tj. de NOVO varijante.
+
+SLAJD 5
+
+U VCF fajlu varijante mogu biti na somatskim tj telesnim ili polnim hromozomima. 
+Ljudi imaju 22 para telesnih hromozoma, i u svakom paru varijacija moze biti 
+na samo jednom ili na oba hromozoma. 
+Kako dete po pravilima nasledjivanja dobija 1 somatski hromozom od oca, a jedan od majke, postoji veliki
+broj kombinacija tih varijacija koje dete moze da nasledi. Zbog toga smo pravili ove tabele sa svim
+mogucim slucajevima za presek, uniju i disjunkciju. Ovo je na primer tabela za presek, njeni izlazi ce se
+koristiti u tabeli za uniju, a njeni opet u tabeli za disjunkciju. Prve dve kolone su genotipi ulaznih fajlova,
+a treca je akcija koja se u tom slucaju izvrsava.
+
+Na primer red 0/1 1/1:
+Ukoliko roditelj, recimo majka, ima na jednom hromozomu varijaciju, a dete ima varijaciju na oba hromozoma, 
+onda ukoliko je to identicna varijacija, u presek upisujemo genotip 0/1 jer dete moze da nasledi samo 1
+hromozom od majke, a u suprotnom ne pisemo nista u presek.
+
+SLAJD 6
+
+Sto se tice polnih hromozoma, sin bi trebalo da nasledi Y hromozom od oca i X hromozom od majke. 
+Medjutim, u VCF fajlu majke pojavljuju se varijacije na Y hromozomu, koje ne bi trebalo da postoje 
+jer majka nema Y hromozom. Do ovoga dolazi jer u X i Y hromozomima postoji mnogo slicnih sekvenci,
+pa se readovi u procesu align-ovanja smestaju na pogresan hromozom. Takodje se desava da neke varijacije
+imaju genotip 1/2 iako bi trebalo da imaju samo jedan taj hromozom.
+I zbog toga moramo da koristimo posebnu logiku pri odredjivanju preseka i unije varijacija na ovm hromozomima.
+
+SLAJD 7
+
+Ovo su rezultati koje smo dobili koriscenjem naseg alata, koriscenjem VCFEval alata u potpunosti, i 
+parcijalno tako sto smo preseke dobijene VCFEval alatom ubacili u nasu 2. i 3. fazu.
+
+* procitati brojeve?
+
+SLAJD 8
+
+I ovo su isti rezultati prikazani uz pomoc VCF Benchmark alata, gde se vidi koliko pravih de novo varijanti smo registrovali, koliko smo imali false negative rezultata odnosno de novo varijanti koje nismo registrovali,
+i false positive tj one koje smo detektovali kao de novo a u stvari su nasledjene.
+
+SLAJD 9
+
+Ove greske se desavaju zbog situacija koje nas alat ne uzima u obzir, a to su uglavnom slucajevi gde je ista varijacija zapisana kao vise manjih varijacija (u tom slucaju nas alat svaku od njih detektuje kao
+de novo ako ne postoji ista takva u roditelju) ili ako je varijacija prosto na drugi nacin zapisana

@@ -13,7 +13,8 @@
 
 ---
 ### VCF files
-&nbsp;&nbsp;&nbsp;&nbsp;The Variant Call Format ([VCF](https://en.wikipedia.org/wiki/Variant_Call_Format)) specifies the format of a text file used in bioinformatics for storing gene sequence variations. It contains the VCF header and the columns of a VCF. The header begins the file and provides metadata describing the body of the file. The body of VCF follows the header, and is tab separated into 8 mandatory columns and an unlimited number of optional columns that may be used to record other information about the sample(s).
+&nbsp;&nbsp;&nbsp;&nbsp;The Variant Call Format ([VCF](https://en.wikipedia.org/wiki/Variant_Call_Format)) specifies the format of a text file used in bioinformatics for storing gene sequence variations. It contains the VCF header and the columns of a VCF. The header begins the file and provides metadata describing the body of the file. 
+&nbsp;&nbsp;&nbsp;&nbsp;The body of VCF follows the header, and is tab separated into 8 mandatory columns and an unlimited number of optional columns that may be used to record other information about the sample(s).
 
 ![VCF file exapmle](images/vcf_file.png)
 
